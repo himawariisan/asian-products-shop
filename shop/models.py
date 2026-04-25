@@ -17,5 +17,25 @@ class Cart(models.Model):
         return f"Cart ({self.session_key})"
     
     def get_total(self):
-        pass
+        return sum(item.get_subtotal() for item in self.items.all())
 
+class CartItem(models.Model):
+    cart = models.ForeignKey(
+        Cart,
+        on_delete=models.CASCADE,  #якщо кошик видалено, всі його CartItems видаляються автоматично
+        related_name='items'
+    )
+
+    product = models.ForeignKey(
+        Product, 
+        on_delete=models.CASCADE,
+        related_name='cart_items'
+    )
+
+    quantity = models.PositiveIntegerField(default=1)
+
+    def __str__(self):
+        return f"{self.quantity}x {self.product.name}"
+    
+    def get_subtotal(self):
+        return self.product.price * self.quantity
