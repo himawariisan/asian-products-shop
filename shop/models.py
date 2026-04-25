@@ -8,3 +8,14 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+class Cart(models.Model):
+    session_key = models.CharField(max_length=40, unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Cart ({self.session_key})"
+    
+    def get_total(self):
+        pass
+
