@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Product
+from .models import Product, Category
 
 
 def index(request):
@@ -25,6 +25,17 @@ def shop_details(request, pk):
     product = get_object_or_404(Product, pk=pk)
     return render(request, 'shop/shop-details.html', {'product': product})
 
-def shop_grid(request):
+def shop_grid(request, category_slug=None):
+    category = None
+    categories = Category.objects.all()
     products = Product.objects.all()
-    return render(request, 'shop/shop-grid.html', {'products': products})
+
+    if category_slug:
+        category = get_object_or_404(Category, slug=category_slug)
+        products = products.filter(category=category)
+
+    return render(request, 'shop/shop-grid.html', {
+        'category': category,
+        'categories': categories,
+        'products': products
+        })
