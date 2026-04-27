@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>Asian Market Shop</h2>
+                        <h2>Bao Bao shop</h2>
                     </div>
                 </div>
             </div>
@@ -17,7 +17,26 @@
     <section class="product spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12">
+                <div class="col-lg-3 col-md-5">
+                    <div class="sidebar">
+                        <div class="sidebar__item">
+                            <h4>Department</h4>
+                            <ul>
+                                <li><a href="{% url 'shop_grid' %}">All</a></li>
+                                
+                                {% for cat in categories %}
+                                    <li>
+                                        <a href="{% url 'shop_grid_category' cat.slug %}">
+                                            {{ cat.name }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9 col-md-7">
                     <div class="row">
                         {% for product in products %}
                         <div class="col-lg-4 col-md-6 col-sm-6">
@@ -29,10 +48,14 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">{{ product.name }}</a></h6>
-                                    <h5>${{ product.price }}</h5>
+                                    <h6><a href="{% url 'shop_details' product.pk %}">{{ product.name }}</a></h6>
+                                    <h5>₴{{ product.price }}</h5>
                                 </div>
                             </div>
+                        </div>
+                        {% empty %}
+                        <div class="col-lg-12">
+                            <p>This category is currently empty</p>
                         </div>
                         {% endfor %}
                     </div>
