@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Product(models.Model):
     name = models.CharField(max_length=100)
@@ -39,3 +40,15 @@ class CartItem(models.Model):
     
     def get_subtotal(self):
         return self.product.price * self.quantity
+    
+class Order(models.Model):
+
+    STATUS_CHOICES = [
+        ('pending', 'Очікує обробки'),
+        ('processing', 'В обробці'),
+        ('shippeed', 'Відправлено'),
+        ('delivered', 'Доставлено'),
+        ('cancelled', 'Скасовано')
+    ]
+
+    user = models.ForeignKey
