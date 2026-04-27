@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Product
+from .models import Product, Cart, CartItem, Order, OrderItem
 
 
 def index(request):
@@ -28,3 +28,24 @@ def shop_details(request, pk):
 def shop_grid(request):
     products = Product.objects.all()
     return render(request, 'shop/shop-grid.html', {'products': products})
+
+def get_or_create_cart(request):
+    if not request.session.session_key:
+        request.session.create()
+    
+    session_key = request.session.session_key
+    cart, created = Cart.objects.get_or_create(session_key=session_key)
+
+    return cart
+
+def cart_detail(request): 
+    cart = get_or_create_cart(request)
+    items = cart.items.all()
+
+    return render(request, 'shop/shopping-cart.html', {
+        'cart': cart,
+        'items': items,
+    })
+
+
+
