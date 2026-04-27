@@ -62,3 +62,22 @@ def add_to_cart(request, pk):
 
     return redirect('cart_detail')
 
+def remove_from_cart(request, pk):
+    cart = get_or_create_cart(request)
+    cart_item = get_object_or_404(CartItem, pk=pk, cart=cart)
+    cart_item.delete()
+    return redirect('cart_detail')
+
+def update_cart(request, pk):
+    cart = get_or_create_cart(request)
+    cart_item = get_object_or_404(CartItem , pk=pk, cart=cart)
+
+    quantity = int(request.POST.get('quantity', 1))
+
+    if quantity > 0:
+        cart_item.quantity = quantity
+        cart_item.save()
+    else:
+        cart_item.delete()
+    
+    return redirect('cart_detail')
