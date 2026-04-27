@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Product, Cart, CartItem, Order, OrderItem
 
 
@@ -47,5 +47,18 @@ def cart_detail(request):
         'items': items,
     })
 
+def add_to_cart(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    cart = get_or_create_cart(request)
 
+    cart_item, created = CartItem.objects.get_or_create(
+        cart=cart,
+        product=product,
+    )
+
+    if not created:
+        cart_item.quantity += 1
+        cart_item.save()
+
+    return redirect('cart_detail')
 
