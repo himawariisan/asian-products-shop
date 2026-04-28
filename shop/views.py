@@ -73,7 +73,7 @@ def add_to_cart(request, pk):
         cart_item.quantity += 1
         cart_item.save()
 
-    return redirect('cart_detail')
+    return redirect(request.META.get('HTTP_REFERER', 'shop_grid')) #повертаємось туди, звідки прийшли
 
 def remove_from_cart(request, pk):
     cart = get_or_create_cart(request)

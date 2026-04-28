@@ -8,7 +8,7 @@ def cart_context(request):
     if request.session.session_key:
         try:
             cart = Cart.objects.get(session_key=request.session.session_key)
-            cart_item_count = cart.items.count()
+            cart_item_count = sum(item.quantity for item in cart.items.all())
             cart_total = cart.get_total()
         except Cart.DoesNotExist:
             pass
