@@ -40,8 +40,7 @@ def shop_grid(request, category_slug=None):
         'category': category,
         'categories': categories,
         'products': products
-        })
-    return render(request, 'shop/shop-grid.html', {'products': products})
+    })
 
 def get_or_create_cart(request):
     if not request.session.session_key:
