@@ -15,7 +15,40 @@ def blog(request):
     return render(request, 'shop/blog.html')
 
 def checkout(request):
-    return render(request, 'shop/checkout.html')
+    cart = get_or_create_cart(request)
+    items = cart.items.all()
+
+    if not items:
+        return redirect('shop_grid')
+    
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        address = request.POST.get('address')
+
+        order = Order.objects.create(
+            name=name,
+            phone=phone,
+            address=address,
+        )
+
+        for item in items:
+            OrderItem.objects.create(
+                order=order,
+                product=item.product,
+                quantity=item.quantity,
+                price=item.product.price,
+            )
+        cart.items.all().delete()
+        return redirect('order_success')
+    
+    return render(request, 'shop/checkout.html', {
+        'cart': cart,
+        'items': items,
+    })
+
+def order_success(request):
+    return render(request, 'shop/order-success.html')
 
 def contact(request):
     return render(request, 'shop/contact.html')
