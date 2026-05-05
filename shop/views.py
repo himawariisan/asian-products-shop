@@ -3,7 +3,12 @@ from .models import Product, Cart, CartItem, Order, OrderItem, Category
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
+from django.contrib.auth.decorators import login_required
 
+
+@login_required
+def profile(request):
+    return render(request, 'shop/profile.html')
 
 class SignUpView(generic.CreateView):
     form_class = UserCreationForm
