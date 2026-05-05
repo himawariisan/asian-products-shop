@@ -34,7 +34,7 @@
                     <div class="product__details__text">
                         <h3>{{ product.name }}</h3>
                         <div class="product__details__price">₴{{ product.price }}</div>
-                        <p>{{ product.description }}</p>
+                        <p>{{ product.description|linebreaks }}</p>
                         <a href="#" class="primary-btn">ADD TO CARD</a>
                         <ul>
                             <li><b>Availability</b> <span>In Stock</span></li>

@@ -9,10 +9,7 @@ urlpatterns = [
     path('shop-grid/', views.shop_grid, name='shop_grid'),
     path('shop-grid/<slug:category_slug>/', views.shop_grid, name='shop_grid_category'),
     path('checkout/', views.checkout, name='checkout'),
-    path('blog-details/', views.blog_details, name='blog_details'),
-    path('blog/', views.blog, name='blog'),
     path('contact/', views.contact, name='contact'),
-
     path('cart/', views.cart_detail, name='cart_detail'),
     path('cart/add/<int:pk>/', views.add_to_cart, name='add_to_cart'),
     path('cart/remove/<int:pk>/', views.remove_from_cart, name='remove_from_cart'),

@@ -1,0 +1,355 @@
+[
+{
+  "model": "shop.category",
+  "pk": 3,
+  "fields": {
+    "name": "Snacks Chips",
+    "slug": "snacks-chips"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 4,
+  "fields": {
+    "name": "Sauces Pastes",
+    "slug": "sauces-pastes"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 5,
+  "fields": {
+    "name": "Noodles Rice",
+    "slug": "noodles-rice"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 6,
+  "fields": {
+    "name": "Frozen Foods",
+    "slug": "frozen-foods"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 7,
+  "fields": {
+    "name": "Coconut Products",
+    "slug": "coconut-products"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 8,
+  "fields": {
+    "name": "Spices Seasonings",
+    "slug": "spices-seasonings"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 9,
+  "fields": {
+    "name": "Canned Goods",
+    "slug": "canned-goods"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 10,
+  "fields": {
+    "name": "Sweet Treats",
+    "slug": "sweet-treats"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 11,
+  "fields": {
+    "name": "Tea Drinks",
+    "slug": "tea-drinks"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 12,
+  "fields": {
+    "name": "Mushrooms Seaweed",
+    "slug": "mushrooms-seaweed"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 13,
+  "fields": {
+    "name": "Soup Bases",
+    "slug": "soup-bases"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 2,
+  "fields": {
+    "category": 5,
+    "name": "Buldak Spicy Ramen Cheese",
+    "description": "CHEESE HOT Chicken flavor ramen SAMYANG\r\nSpice up your dinner with delicious Spicy Chicken Ramen with Cheese! From the leading South Korean ramen brand, Samyang, this spicy and creamy instant meal is sure to give you the satisfaction of a hot bowl of home-cooked food. The combination of four cheese flavors mixed with a level 4 spiciness gives your palate an explosion of flavor and heat.\r\n\r\nPerfect for all occasions—from a quick dinner to a full meal or a midnight snack—this delicious ramen is sure to satisfy any craving and make your taste buds dance! Moreover, it comes in individual restaurant-style portions that you can take with you, so you don't have to worry about excessive leftovers or extra mess. Don't wait any longer to try this hot, creamy dish—add Spicy Chicken Ramen with Cheese to your cart today and get ready for a flavor adventure!\r\n\r\n\r\nCooking Instructions:\r\n1. Pour 600 ml of boiling water over the noodles and cook for 5 minutes.\r\n2. Drain the water from the noodles, leaving approximately 8 spoons of water.\r\n3. Add the liquid sauce to the noodles and stir-fry for 30 seconds while stirring.\r\n4. Add the seasoning powder, mix well, and serve.",
+    "price": "120.00",
+    "image": "products/buldak_cheese_qtmsZ17.jpg"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 3,
+  "fields": {
+    "category": 5,
+    "name": "Buldak Spicy Ramen Carbonara",
+    "description": "HOT Chicken flavor ramen Carbo\r\nSamyang Carbo Hot Chicken Ramen is a variation of the original Buldak Bokkeum Myeon from Samyang—one of the spiciest Korean noodles on the market, often referred to as \"Korean Fire Noodles.\" This Carbo Hot Chicken Ramen comes in a 130g pack and features the flavor of the spicy Italian pasta, Carbonara. While it is less intense than the original Hot Chicken Ramen, it is still spicy enough to blow your mind!\r\n\r\nCan you handle the heat of Samyang Carbo Hot Chicken Ramen? Let's find out! Creamy mozzarella cheese and butter are added to the original spicy chicken base, creating a dish that is perfectly creamy yet fiery.\r\n\r\nCooking Instructions:\r\n1. Pour 600 ml of boiling water over the noodles and cook for 5 minutes.\r\n2. Drain the water from the noodles, leaving approximately 8 spoons of water.\r\n3. Add the liquid sauce to the noodles and stir-fry for 30 seconds while stirring.\r\n4. Add the seasoning powder, mix well, and serve.",
+    "price": "120.00",
+    "image": "products/buldak_carbonara.png"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 4,
+  "fields": {
+    "category": 5,
+    "name": "Buldak Wide Glass Noodle",
+    "description": "Enjoy the creamy and spicy K-style Buldak flat glass noodles, made with Global No.1 Spicy Buldak Sauce, chili, cream for a perfect harmony of flavors.\r\n\r\nThis unique dish features wide glass noodles coated in the signature spicy chicken sauce of Buldak, offering a delicious and satisfying taste experience.\r\nEach bite is a perfect balance of chewy noodles and spicy sauce, making it a delightful meal option\r\n\r\nHOW TO COOK\r\n1. Open lid and put noodles and sauce in the cup.\r\n2. Pour the hot water up to the inner line and stir well.\r\n3. Close the lid halfway and microwave for 2 minutes 30 seconds (1000W) / 3 minutes 30 seconds (700W).\r\n4. Open the lid and put 2 powder packets. Stir well and serve.",
+    "price": "159.00",
+    "image": "products/buldak_rose_glass.png"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 5,
+  "fields": {
+    "category": 5,
+    "name": "Buldak Wide Glass Noodle",
+    "description": "The perfect harmony of creamy Carbo Buldak spice and chewy flat glass noodles\r\n\"Carbo Buldak Flat Glass Noodles\"\r\n\r\nRich and Creamy Carbo Buldak sauce delivering a spicy flavor anyone can enjoy\r\nThe chewy and springy texture of flat glass noodles\r\nEasy to store at room temperature and quick to prepare in the microwave for convenient enjoyment\r\n\r\n1.  Put the noodles and sauce in the bowl.\r\n2.  Pour boiling water up to the inner line and stir well.\r\n3.  Microwave for 2 1/2 minutes with the lid partially closed.\r\n4.  Open the lid and add the 2 powder packets. Stir well and enjoy.",
+    "price": "159.00",
+    "image": "products/buldak_carbonara_wide.png"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 6,
+  "fields": {
+    "category": 5,
+    "name": "Hakata Ramen-Rich Tonkotsu Style",
+    "description": "Bring the savory taste of Japan’s famous Hakata ramen into your kitchen. Daisho’s Rich Tonkotsu ramen features a creamy, garlic-pepper seasoned broth base blended with savory soy sauce and the deep umami of vegetables – all without a trace of meat.\r\n\r\nHOW TO COOK\r\n1. Bring to a boil 450ml water.\r\n2. Simmer noodles for 2-2.5 minutes.\r\n3. Put the powder soup into a pot and mix well.\r\n4. Serve in a bowl and ready to enjoy!",
+    "price": "179.00",
+    "image": "products/hakata_noodles.jpg"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 7,
+  "fields": {
+    "category": 4,
+    "name": "Maepranom shrimp paste",
+    "description": "Maepranom shrimp paste is a traditional Thai condiment made from fermented shrimp and salt, known for its intense seafood aroma and deep umami flavor. It is commonly used in Thai dishes such as curry, tom yum soup, and som tam. Maepranom is available in various sizes, including a 350g pack suitable for professional and home use, as well as a 100g compact option for smaller portions. \r\n\r\nShrimp Paste – 350g by Maepranom (Thailand)\r\nRich umami seasoning for curries, soups, and Thai salads",
+    "price": "489.00",
+    "image": "products/shrimp_paste.jpg"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 8,
+  "fields": {
+    "category": 3,
+    "name": "Ock Dong Ja Nori Snack with Wasabi",
+    "description": "Seaweed Snack Wasabi OCK-DONG-JA\r\nOCK-DONG-JA Wasabi Nori Snack features crispy sheets of nori seaweed seasoned with wasabi. This is a fresh Asian innovation in the snack category—a healthy and appetizing seaweed treat with a kick of wasabi, free from preservatives and artificial additives. Especially popular in Korea and Japan, these snacks are made from nori seaweed, which is naturally rich in vitamins A, C, and B. Nori chips are a healthy snack for walks and travels, as well as a great energy boost before or after an intense gym workout.\r\n\r\n\"Nori\" chips are a popular Korean light snack made from marine algae. This product is designed for those who are health-conscious and mindful of their figure. These crispy nori sheets perfectly satisfy hunger while preserving all the exceptional properties of seaweed. They are incredibly tasty, salty, spicy, thin, and lightly toasted.",
+    "price": "29.00",
+    "image": "products/ock_nori.jpg"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 9,
+  "fields": {
+    "category": 5,
+    "name": "Shin Ramyun Original",
+    "description": "Craving a bowl of comfort with a kick? Shin Ramyun has been a fan-favorite since day one, winning hearts (and taste buds) worldwide with its bold, spicy flavor. Our perfectly springy noodles pair with a rich, savory beef broth, enhanced with beef bone extract, mushrooms, and a medley of vegetables to create the ultimate Korean comfort food.\r\n\r\nSpicy, savory, and seriously satisfying - it's no wonder Shin Ramyun became an instant classic! Whether you're looking for a quick meal or a soul-warming treat, this iconic flavor will keep you coming back for more.\r\n\r\nTaste the legend. Feel the heat. Love the flavor.",
+    "price": "90.00",
+    "image": "products/shin_ramyun.jpg"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 10,
+  "fields": {
+    "category": 6,
+    "name": "Gyoza Skin Sheets Happy Belly",
+    "description": "Happy Belly Gyoza Dough - a dough for making traditional Japanese gyoza, with an optimal diameter of 100 mm for easy shaping and filling. \r\n\r\nThin and elastic — easy to shape and seal, provides a great texture when steaming, frying or boiling. \r\nPure taste — a neutral dough that goes well with a variety of fillings: meat, fish, vegetables or even sweet options. \r\nQuick cooking — ideal for quick processing and serving in restaurants or for home cooking. \r\n\r\nIngredients Wheat flour, prepared water, soybean oil, soybean protein, corn starch.\r\n\r\nStorage conditions and shelf life \r\nStore at -18⁰С. Shelf life 24 months.",
+    "price": "269.00",
+    "image": "products/HappyBellyGyozaSkin.jpg"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 11,
+  "fields": {
+    "category": 7,
+    "name": "Coconut cream SAVOY",
+    "description": "Coconut Cream 70% Savoy\r\nCoconut cream, also known as coconut milk or coconut cream, is one of the primary products derived from the coconut. It possesses a rich, creamy flavor and is a staple in many cuisines around the world, particularly in Asian and Caribbean cooking.\r\n\r\nCoconut cream is produced by extracting and blending the inner flesh of a mature coconut. This process results in a thick, rich liquid with a texture reminiscent of heavy dairy cream. Coconut cream carries a subtle, natural sweetness and a distinct coconut aroma.\r\n\r\nIt is widely used in culinary applications to prepare sauces, soups, curries, desserts, and cocktails. Adding coconut cream to dishes provides a velvety consistency and a deep, luxurious flavor. Furthermore, it can be frozen to create coconut ice cream or used as a plant-based dairy substitute in various recipes.",
+    "price": "225.00",
+    "image": "products/cream_of_coconut_7ijaqOc.jpg"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 12,
+  "fields": {
+    "category": 8,
+    "name": "HEALTHY BOY Monosodium Glutamate",
+    "description": "Monosodium Glutamate Healthy Boy\r\nMonosodium Glutamate (MSG) is a white crystalline powder that dissolves easily in water. Popular across the civilized world, it was first developed in Japan at the beginning of the last century. As a seasoning, MSG is a food additive that brings out and enhances the natural flavors of meat, poultry, seafood, mushrooms, and certain vegetables.\r\n\r\nThese elongated white crystals are tasteless and odorless on their own but transform the profile of a dish when added. Produced from natural ingredients (primarily sugarcane) through an environmentally friendly fermentation process, it is widely recognized as the ultimate flavor enhancer!",
+    "price": "155.00",
+    "image": "products/msg.png"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 13,
+  "fields": {
+    "category": 9,
+    "name": "Stir-fried Kimchi Cabbage Jongga",
+    "description": "Canned Korean Fried Kimchi Jongga\r\nCanned Fried Kimchi is the perfect side dish for hot, Asian-style main courses. This wonderful Korean salad not only boasts a unique flavor but also offers significant health benefits. It is packed with a vast amount of antioxidants that help support overall well-being and slow down the body's aging process.\r\n\r\nThis canned fried Korean kimchi is an excellent Asian garnish and can also be used as a versatile ingredient for various Korean salads. It features a savory, moderately spicy profile. As a true powerhouse of vitamins and antioxidants, kimchi is a healthy addition to any diet. It pairs exceptionally well with rice—enjoy it hot or cold! For an extra touch of flavor, try sprinkling some sesame seeds on top. It’s absolutely delicious!",
+    "price": "245.00",
+    "image": "products/stir_fried_kimchi.png"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 14,
+  "fields": {
+    "category": 10,
+    "name": "KitKat - Strawberry Shortcake",
+    "description": "Discover the brand new Japanese of the moment: Chocolate Strawberry Cake Flavor in limited edition! These irresistible bites combine the crunch of thin wafers with a creamy strawberry cream, all coated in deliciously strawberry-flavored milk chocolate. With a touch of rum to enhance the taste (contains 0.09% alcohol).\r\n\r\nIngredients: Chocolate (sugar, lactose, vegetable oil, whole milk powder, cocoa butter) (manufactured in Japan), wheat flour, vegetable oil, lactose, sugar, dried strawberry products, cream powder, cocoa powder, yeast, cacao mass, whole milk powder, cocoa butter / Emulsifier (soybean derived), acidulant, flavoring, baking soda, yeast food, coloring (red beet, red yeast rice).",
+    "price": "389.00",
+    "image": "products/kitkatstr.jpg"
+  }
+},
+{
+  "model": "shop.cart",
+  "pk": 1,
+  "fields": {
+    "session_key": "czyfahu53zjknah0ee7jtfvs4r75zcod",
+    "created_at": "2026-04-28T14:31:20.101Z"
+  }
+},
+{
+  "model": "shop.cart",
+  "pk": 2,
+  "fields": {
+    "session_key": "xh0qt1sw9ksvh5itniowc0hu0vh02piy",
+    "created_at": "2026-04-28T16:22:42.084Z"
+  }
+},
+{
+  "model": "shop.cart",
+  "pk": 3,
+  "fields": {
+    "session_key": "d0t9thgz9y664c1jdew2d6ei84743xe0",
+    "created_at": "2026-04-28T16:45:10.388Z"
+  }
+},
+{
+  "model": "shop.cart",
+  "pk": 4,
+  "fields": {
+    "session_key": "k9bv12x4ok5gg5s4g389jm879iknu699",
+    "created_at": "2026-05-05T17:13:52.141Z"
+  }
+},
+{
+  "model": "shop.cart",
+  "pk": 5,
+  "fields": {
+    "session_key": "f0pqpinwb0eonjns50zmoi72ya77daf8",
+    "created_at": "2026-05-05T17:49:53.788Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "name": "123456",
+    "phone": "1234567",
+    "address": "12345678",
+    "status": "pending",
+    "created_at": "2026-04-28T14:34:03.617Z",
+    "updated_at": "2026-04-28T14:34:03.617Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 2,
+  "fields": {
+    "user": null,
+    "name": "test",
+    "phone": "0984415687",
+    "address": "вулиця Юрія Литвинського, 90",
+    "status": "pending",
+    "created_at": "2026-04-29T17:28:39.967Z",
+    "updated_at": "2026-04-29T17:28:39.967Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 3,
+  "fields": {
+    "user": null,
+    "name": "test2",
+    "phone": "0984415676",
+    "address": "dejkoiilhj.",
+    "status": "pending",
+    "created_at": "2026-04-29T17:29:40.332Z",
+    "updated_at": "2026-04-29T17:29:40.332Z"
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 4,
+  "fields": {
+    "user": null,
+    "name": "test1",
+    "phone": "12345678",
+    "address": "qwertyui",
+    "status": "pending",
+    "created_at": "2026-04-29T17:44:21.320Z",
+    "updated_at": "2026-04-29T17:44:21.320Z"
+  }
+},
+{
+  "model": "shop.orderitem",
+  "pk": 1,
+  "fields": {
+    "order": 2,
+    "product": null,
+    "quantity": 6,
+    "price": "110.00"
+  }
+},
+{
+  "model": "shop.orderitem",
+  "pk": 2,
+  "fields": {
+    "order": 3,
+    "product": null,
+    "quantity": 2,
+    "price": "110.00"
+  }
+},
+{
+  "model": "shop.orderitem",
+  "pk": 3,
+  "fields": {
+    "order": 4,
+    "product": null,
+    "quantity": 1,
+    "price": "110.00"
+  }
+}
+]
