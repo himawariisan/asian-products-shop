@@ -1,8 +1,14 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Product, Category
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Product, Cart, CartItem, Order, OrderItem
+from .models import Product, Cart, CartItem, Order, OrderItem, Category
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+from django.views import generic
 
+
+class SignUpView(generic.CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'registration/signup.html'
 
 def index(request):
     products = Product.objects.all()
@@ -15,7 +21,40 @@ def blog(request):
     return render(request, 'shop/blog.html')
 
 def checkout(request):
-    return render(request, 'shop/checkout.html')
+    cart = get_or_create_cart(request)
+    items = cart.items.all()
+
+    if not items:
+        return redirect('shop_grid')
+    
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        address = request.POST.get('address')
+
+        order = Order.objects.create(
+            name=name,
+            phone=phone,
+            address=address,
+        )
+
+        for item in items:
+            OrderItem.objects.create(
+                order=order,
+                product=item.product,
+                quantity=item.quantity,
+                price=item.product.price,
+            )
+        cart.items.all().delete()
+        return redirect('order_success')
+    
+    return render(request, 'shop/checkout.html', {
+        'cart': cart,
+        'items': items,
+    })
+
+def order_success(request):
+    return render(request, 'shop/order-success.html')
 
 def contact(request):
     return render(request, 'shop/contact.html')
@@ -40,8 +79,7 @@ def shop_grid(request, category_slug=None):
         'category': category,
         'categories': categories,
         'products': products
-        })
-    return render(request, 'shop/shop-grid.html', {'products': products})
+    })
 
 def get_or_create_cart(request):
     if not request.session.session_key:
@@ -74,7 +112,7 @@ def add_to_cart(request, pk):
         cart_item.quantity += 1
         cart_item.save()
 
-    return redirect('cart_detail')
+    return redirect(request.META.get('HTTP_REFERER', 'shop_grid')) #повертаємось туди, звідки прийшли
 
 def remove_from_cart(request, pk):
     cart = get_or_create_cart(request)

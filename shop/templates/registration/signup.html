@@ -1,0 +1,62 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+<style>
+    /* Стилізація стандартних полів Django */
+    .signup-form input {
+        width: 100%;
+        height: 50px;
+        border: 1px solid #ebebeb;
+        padding-left: 20px;
+        font-size: 16px;
+        color: #b2b2b2;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+    .signup-form label {
+        display: block;
+        font-weight: 700;
+        color: #1c1c1c;
+        margin-bottom: 5px;
+    }
+    .helptext, .helptext ul {
+        font-size: 12px;
+        color: #6f6f6f;
+        margin-bottom: 15px;
+        list-style: none;
+        padding-left: 0;
+    }
+</style>
+
+<div class="container spad">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 signup-form">
+            <div class="contact__form__title text-center">
+                <h2>Create Account</h2>
+            </div>
+            <form method="post">
+                {% csrf_token %}
+                
+                {# Цикл, який дозволяє стилізувати кожне поле окремо #}
+                {% for field in form %}
+                    <div class="checkout__input">
+                        <label>{{ field.label }}</label>
+                        {{ field }}
+                        {% if field.help_text %}
+                            <div class="helptext">{{ field.help_text|safe }}</div>
+                        {% endif %}
+                        {% for error in field.errors %}
+                            <p style="color: red;">{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+
+                <button type="submit" class="site-btn w-100">REGISTER NOW</button>
+            </form>
+            <div class="mt-4 text-center">
+                <p>Already have an account? <a href="{% url 'login' %}" style="color: #d42c2c;">Login here</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

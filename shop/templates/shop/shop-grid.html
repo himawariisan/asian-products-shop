@@ -44,7 +44,14 @@
                                 <div class="product__item__pic set-bg" data-setbg="{{ product.image.url }}">
                                     <ul class="product__item__pic__hover">
                                         <li><a href="{% url 'shop_details' product.pk %}"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li>
+                                            <form method="POST" action="{% url 'add_to_cart' product.pk %}">
+                                                {% csrf_token %}
+                                                <button type="submit" style="background:none; border:none; cursor:pointer; padding:0; color:inherit; font-size:inherit;">
+                                                    <i class="fa fa-shopping-cart"></i>
+                                                </button>
+                                            </form>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
