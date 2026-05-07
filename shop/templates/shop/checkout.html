@@ -52,10 +52,10 @@
                             <div class="checkout__order__products">Product <span>Total</span></div>
                             <ul>
                                 {% for item in items %}
-                                <li>
-                                    {{ item.product.name }} x{{ item.quantity }}
-                                    <span>₴{{ item.get_subtotal }}</span>
-                                </li>
+                                    <li style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                        <span style="flex: 1; padding-right: 10px;">{{ item.product.name }} x{{ item.quantity }}</span>
+                                        <span style="font-weight: 700;">₴{{ item.get_subtotal }}</span>
+                                    </li>
                                 {% endfor %}
                             </ul>
                             <div class="checkout__order__subtotal">
