@@ -17,4 +17,5 @@ urlpatterns = [
     path('order-success/', views.order_success, name='order_success'),
     path('signup/', views.SignUpView.as_view(), name='signup'),
     path('profile/', views.profile, name='profile'),
+    path('shop/category/<slug:category_slug>/', views.shop_grid, name='shop_by_category'),
 ]

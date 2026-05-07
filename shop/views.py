@@ -17,7 +17,8 @@ class SignUpView(generic.CreateView):
 
 def index(request):
     products = Product.objects.all()
-    return render(request, 'shop/index.html', {'products': products})
+    categories = Category.objects.all()
+    return render(request, 'shop/index.html', {'products': products, 'categories': categories})
 
 def blog_details(request):
     return render(request, 'shop/blog-details.html')
@@ -89,6 +90,7 @@ def shop_grid(request, category_slug=None):
 def get_or_create_cart(request):
     if not request.session.session_key:
         request.session.create()
+        request.session.modified = True
     
     session_key = request.session.session_key
     cart, created = Cart.objects.get_or_create(session_key=session_key)
@@ -105,6 +107,7 @@ def cart_detail(request):
     })
 
 def add_to_cart(request, pk):
+    print(f"--- ДОДАЄМО ТОВАР ID: {pk} ---")
     product = get_object_or_404(Product, pk=pk)
     cart = get_or_create_cart(request)
 
@@ -117,7 +120,8 @@ def add_to_cart(request, pk):
         cart_item.quantity += 1
         cart_item.save()
 
-    return redirect(request.META.get('HTTP_REFERER', 'shop_grid')) #повертаємось туди, звідки прийшли
+    print(f"--- УСПІШНО ДОДАНО В КОШИК: {cart.session_key} ---")
+    return redirect(request.META.get('HTTP_REFERER', 'shop_grid'))
 
 def remove_from_cart(request, pk):
     cart = get_or_create_cart(request)

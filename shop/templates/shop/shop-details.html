@@ -3,20 +3,6 @@
 
 {% block content %}
     <section class="breadcrumb-section set-bg" data-setbg="{% static 'shop/img/breadcrumb.jpg' %}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>{{ product.name }}</h2>
-                        <div class="breadcrumb__option">
-                            <a href="{% url 'index' %}">Home</a>
-                            <a href="{% url 'shop_grid' %}">Shop</a>
-                            <span>{{ product.name }}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <section class="product-details spad">
@@ -35,7 +21,7 @@
                         <h3>{{ product.name }}</h3>
                         <div class="product__details__price">₴{{ product.price }}</div>
                         <p>{{ product.description|linebreaks }}</p>
-                        <a href="#" class="primary-btn">ADD TO CARD</a>
+                        <a href="{% url 'add_to_cart' product.pk %}" class="primary-btn">ADD TO CARD</a>
                         <ul>
                             <li><b>Availability</b> <span>In Stock</span></li>
                             <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>

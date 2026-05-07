@@ -12,17 +12,9 @@
                             <span>All departments</span>
                         </div>
                         <ul>
-                            <li><a href="#">Snacks Chips</a></li>
-                            <li><a href="#">Sauces Pastes</a></li>
-                            <li><a href="#">Noodles Rice</a></li>
-                            <li><a href="#">Frozen Foods</a></li>
-                            <li><a href="#">Coconut Products</a></li>
-                            <li><a href="#">Spices Seasonings</a></li>
-                            <li><a href="#">Canned Goods</a></li>
-                            <li><a href="#">Sweet Treats</a></li>
-                            <li><a href="#">Tea Drinks</a></li>
-                            <li><a href="#">Mushrooms Seaweed</a></li>
-                            <li><a href="#">Soup Bases</a></li>
+                            {% for category in categories %}
+                                <li><a href="{% url 'shop_by_category' category.slug %}">{{ category.name }}</a></li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
@@ -80,7 +72,7 @@
                     </div>
                 </div>
                 {% empty %}
-                <p>Товарів поки немає.</p>
+                <p>No products yet</p>
                 {% endfor %}
             </div>
         </div>
